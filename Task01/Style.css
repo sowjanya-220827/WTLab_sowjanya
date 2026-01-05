@@ -1,11 +1,12 @@
 body{
-            margin:5px;
+        margin:5px;
         font-family: Arial;
-        background-color:cadetblue;
+        background-color: cadetblue;
+
     }     
  header{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            background-color:black;
+            background-color:rgb(17, 17, 17);
             color:white;
             padding:15px;
             font-size:30px;
@@ -82,3 +83,6 @@ th{
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size:20px;
         }
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
