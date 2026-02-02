@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title> APPOINTMENT FORM</title>
+        <style>
+            body{
+                background-color:#f4f9ff;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            h1{
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                font-size:xx-large;
+                color:darkred;
+            }
+            .App-form{
+                width: 500px;
+                height: 700px;
+                padding: 30px;
+                margin: 40px auto ;
+                background-color: #ffffff;
+                border-radius: 20px;
+            }
+            label{
+                font-weight: bold;
+                font-size: x-large;
+            }
+            input,select,textarea{
+                width: 100%;
+                padding: 10px;
+                
+            }
+            button{
+                width: 100%;
+                padding: 10px;
+                background-color: #27ae60;
+                border-radius: 10px;
+                cursor: pointer;
+                color: black;
+                font-size: 20px;
+            }
+            button:hover{
+                background-color:greenyellow;
+            }
+
+        </style>
+   </head>
+   <body>
+    <h1>BOOK APPOINTMENT</h1>
+      <div class="App-form">
+          <form onsubmit="submitForm(); return false;">
+             <label> Patient name:</label>
+             <input type="text" id="name" placeholder="Enter your name" required>
+             <br>
+             <br>
+             <label> Patient Age:</label>
+             <input type="number" id="age" placeholder="Enter your Age" required>
+             <br>
+             <br>
+             <label> Gender:</label>
+             <select required>
+                 <option value="">select your Gender</option>
+                 <option >Male </option>
+                 <option >Female </option>
+                 <option >Other </option>
+             </select>
+             <br>
+             <br>
+             <label>Department:</label>
+             <select required>
+                <option value="">Select Department</option>
+                <option> General Medicine</option>
+                <option>Cardiology</option>
+                <option> Neurology</option>
+                <option>Orthopedics </option>
+                <option>Pediatrics </option>
+             </select>
+             <br>
+             <br>
+             <label>Appointment Date:</label>
+             <input type="date" id="ADATE" required>
+             <br>
+             <br>
+             <label>Appointment time:</label>
+             <input type="time" id="ATIME" required>
+             <br>
+             <br>
+             <label>Problem description:</label>
+             <textarea row="3" placeholder="Briefly describe your issue">
+             </textarea>
+             <br>
+             <br>
+             <button type="submit" onclick="showmsg()">BOOK APPOINTMENT</button>
+             <p id="result" style="font-family: Arial, Helvetica, sans-serif; font-size: larger;"> </p>
+          </form>
+      </div>
+      <script src="C:\Users\Sowjanya\Desktop\WTLab_sowjanya\Task01\smart.js"></script>
+   </body>
+</html>
