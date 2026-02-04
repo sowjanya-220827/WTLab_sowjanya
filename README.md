@@ -1,7 +1,7 @@
 # Smart Health Dashboard
 
 ## Aim
-To design a simple *Smart Health Dashboard UI* using *HTML and CSS*.
+To design a simple *Smart Health Dashboard UI* using *HTML,javascript and CSS*.
 
 ## Description
 This project provides a basic healthcare dashboard interface to display
