@@ -1,0 +1,15 @@
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770654478_ssd.pdf
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770654876_ssd.pdf
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770655166_ssd.pdf
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770655171_ssd.pdf
+raghu | 23 | Female | General Medicine | 2026-02-12 | 21:01 | fever | uploads/1770655225_ssd.pdf
+vara | 19 | Female | Neurology | 2026-02-04 | 22:33 | cold | uploads/1770656433_link.txt
+New appointment entry: John Doe | 30 | General Medicine
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770654478_ssd.pdf
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770654876_ssd.pdf
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770655166_ssd.pdf
+raghu | 23 | Female | General Medicine |  |  | fever | uploads/1770655171_ssd.pdf
+raghu | 23 | Female | General Medicine | 2026-02-12 | 21:01 | fever | uploads/1770655225_ssd.pdf
+vara | 19 | Female | Neurology | 2026-02-04 | 22:33 | cold | uploads/1770656433_link.txt
+New appointment entry: John Doe | 30 | General Medicine
+Another entry: Jane Smith | 25 | Cardiology

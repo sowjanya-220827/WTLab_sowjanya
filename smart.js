@@ -4,6 +4,11 @@ function weluser(){
 function showAlert(){
     alert("Welcome to MSR Hospitals smart Healthcare Dashboard")
 }
+function submitForm() {
+    alert("Form submitted successfully");
+    return true;   // allows PHP submission
+}
+
 function showmsg(){
     alert("Appointment booked successfullyy!")
 }
