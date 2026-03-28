@@ -22,3 +22,33 @@ Example: git config --unset user.name
 
 <img width="752" height="650" alt="step1" src="https://github.com/user-attachments/assets/f393c809-d806-4343-833e-7591e7dcebbd" />
 
+2. Repository Setup Commands
+1. git init
+
+Command Name: git init
+Syntax: git init
+Purpose: Initializes a new Git repository in the current directory. It creates a .git folder to track project changes.
+Example: git init
+
+2. git clone
+
+Command Name: git clone
+Syntax: git clone <repository_url>
+Purpose: Copies an existing remote repository from GitHub (or other platforms) to your local system.
+Example: git clone https://github.com/user/sample-project.git
+
+3. git clone --branch
+
+Command Name: git clone --branch
+Syntax: git clone --branch <branch_name> <repository_url>
+Purpose: Clones a specific branch from a repository instead of the default branch.
+Example: git clone --branch develop https://github.com/user/sample-project.git
+
+4. git clone --depth
+
+Command Name: git clone --depth
+Syntax: git clone --depth <number> <repository_url>
+Purpose: Performs a shallow clone by downloading only the latest commits, reducing clone time and size.
+Example: git clone --depth 1 https://github.com/user/sample-project.git
+
+<img width="752" height="650" alt="step1" src="git_commands\git screenshots\Screenshot 2026-03-28 223249.png" />
