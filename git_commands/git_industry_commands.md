@@ -51,4 +51,4 @@ Syntax: git clone --depth <number> <repository_url>
 Purpose: Performs a shallow clone by downloading only the latest commits, reducing clone time and size.
 Example: git clone --depth 1 https://github.com/user/sample-project.git
 
-<img width="752" height="650" alt="step1" src="git_commands\git screenshots\Screenshot 2026-03-28 223249.png" />
+<img width="752" height="650" alt="step1" src="" />
