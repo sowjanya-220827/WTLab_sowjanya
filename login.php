@@ -49,8 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         label { display: block; margin-top: 12px; font-weight: bold; }
         input { width: 100%; padding: 8px; margin-top: 6px; }
         button { width: 100%; margin-top: 16px; padding: 10px; background: #3498db; border: 0; border-radius: 6px; cursor: pointer; }
+        .oauth-btn { display: block; text-align: center; margin-top: 12px; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 6px; text-decoration: none; color: #333; }
+        .oauth-btn:hover { background: #f7f7f7; }
         .error { color: #b30000; }
         .links { margin-top: 12px; }
+        .divider { margin: 16px 0; text-align: center; color: #777; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -74,6 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <button type="submit">Log In</button>
         </form>
+
+        <div class="divider">or</div>
+        <a class="oauth-btn" href="google_oauth_start.php">Sign in with Google</a>
 
         <div class="links">
             New user? <a href="register.php">Create an account</a>
