@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'DASHdb_con.php';
+require 'config/db.php';   // MongoDB connection
 
 $errors = [];
 
@@ -13,29 +13,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (!$errors) {
-        $stmt = mysqli_prepare($conn, 'SELECT id, username, password_hash FROM users WHERE username = ? OR email = ?');
-        mysqli_stmt_bind_param($stmt, 'ss', $identifier, $identifier);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_store_result($stmt);
 
-        if (mysqli_stmt_num_rows($stmt) === 1) {
-            mysqli_stmt_bind_result($stmt, $id, $username, $hash);
-            mysqli_stmt_fetch($stmt);
+        // Find user by username OR email
+        $user = $users->findOne([
+            '$or' => [
+                ['username' => $identifier],
+                ['email' => $identifier]
+            ]
+        ]);
 
-            if (password_verify($password, $hash)) {
+        if ($user) {
+
+            // Verify password
+            if (password_verify($password, $user['password'])) {
+
                 session_regenerate_id(true);
-                $_SESSION['user_id'] = $id;
-                $_SESSION['username'] = $username;
+                $_SESSION['user_id'] = (string)$user['_id'];
+                $_SESSION['username'] = $user['username'];
+
                 header('Location: DASHindex.php');
                 exit;
+
             } else {
                 $errors[] = 'Invalid credentials.';
             }
+
         } else {
             $errors[] = 'Invalid credentials.';
         }
-
-        mysqli_stmt_close($stmt);
     }
 }
 ?>
@@ -49,8 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         label { display: block; margin-top: 12px; font-weight: bold; }
         input { width: 100%; padding: 8px; margin-top: 6px; }
         button { width: 100%; margin-top: 16px; padding: 10px; background: #3498db; border: 0; border-radius: 6px; cursor: pointer; }
+        .oauth-btn { display: block; text-align: center; margin-top: 12px; padding: 10px; background: #fff; border: 1px solid #ddd; border-radius: 6px; text-decoration: none; color: #333; }
+        .oauth-btn:hover { background: #f7f7f7; }
         .error { color: #b30000; }
         .links { margin-top: 12px; }
+        .divider { margin: 16px 0; text-align: center; color: #777; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -65,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <form method="POST" action="login.php">
+        <form method="POST" action="">
             <label>Username or Email</label>
             <input type="text" name="identifier" value="<?php echo htmlspecialchars($identifier ?? ''); ?>" required>
 
@@ -74,6 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <button type="submit">Log In</button>
         </form>
+
+        <div class="divider">or</div>
+        <a class="oauth-btn" href="google_oauth_start.php">Sign in with Google</a>
 
         <div class="links">
             New user? <a href="register.php">Create an account</a>

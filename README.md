@@ -27,6 +27,13 @@ Build a small lab project that demonstrates:
 4. Start a local PHP server (XAMPP/WAMP/LAMP).
 5. Open `login.php` in the browser.
 
+## Google OAuth Setup
+1. Create a Google OAuth Client ID (Web application) in Google Cloud Console.
+2. Add an authorized redirect URI that exactly matches your callback URL (scheme, host, port, and trailing slash must match).
+3. For local development you may use `http://localhost/...` as the redirect URI.
+4. Update `google_oauth_config.php` with your Client ID, Client Secret, and Redirect URI.
+5. Use the "Sign in with Google" button on `login.php`.
+
 ## Key Pages
 - `register.php` - create user account
 - `login.php` - authenticate user
